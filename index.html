@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Use the app to view a list of the video games you've played, organized by year." />
+    <title>playrecap</title>
+  </head>
+    <script>
+  (function() {
+    const storageKey = "vite-ui-theme";
+    const theme = localStorage.getItem(storageKey);
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const effectiveTheme = theme === "system" || !theme
+      ? (systemPrefersDark ? "dark" : "light")
+      : theme;
+
+    document.documentElement.classList.add(effectiveTheme);
+  })();
+</script>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
