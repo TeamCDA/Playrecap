@@ -1,8 +1,12 @@
+import { ModeToggle } from "@/components/mode-toggle";
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
-  )
-}
+    <div className="flex min-h-svh flex-col items-center justify-center">
+      <h1>HOME</h1>
+      <ModeToggle />
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;
