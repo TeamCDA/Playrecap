@@ -1,12 +1,13 @@
-import CustomSearchInput from "@/components/CustomSearchInput";
+
+import FiltersGames from "@/components/home/FiltersGames";
 
 
 const HomePage = () => {
   return (
     <div className="contenu">
 
-      <div className="mt-5 flex justify-center">
-        <CustomSearchInput />
+      <div className="mt-5">
+        <FiltersGames />
       </div>
     </div>
   );

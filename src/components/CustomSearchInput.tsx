@@ -5,15 +5,18 @@ import {
 } from "@/components/ui/input-group";
 import { SearchIcon } from "lucide-react";
 
-const CustomSearchInput = () => {
+type Props = {
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+}
+const CustomSearchInput = ( { setSearch } : Props) => {
   return (
     <div className="w-full max-w-sm">
-      <InputGroup>
-        <InputGroupInput placeholder="Search game..." />
+      <InputGroup className="bg-white">
+        <InputGroupInput placeholder="Search game..." onChange={(e) => setSearch(e.target.value)} />
         <InputGroupAddon>
           <SearchIcon />
         </InputGroupAddon>
-        <InputGroupAddon align="inline-end">12 results</InputGroupAddon>
+        {/* <InputGroupAddon align="inline-end">12 results</InputGroupAddon> */}
       </InputGroup>
     </div>
   );
