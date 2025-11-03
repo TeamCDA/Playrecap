@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import AuthPage from "../pages/AuthPage";
 import HomePage from "../pages/HomePage";
-import ProfileTestPage from "@/pages/ProfileTestPage";
 
 const RouterApp = () => {
   return (
@@ -12,7 +11,6 @@ const RouterApp = () => {
       <Route path="/home" element={<HomePage />} />
       {/* PRIVATE */}
       {/* TEST */}
-      <Route path="/profile" element={<ProfileTestPage />} />
     </Routes>
   );
 };
