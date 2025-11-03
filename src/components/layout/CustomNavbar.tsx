@@ -22,7 +22,7 @@ const CustomNavbar = () => {
               className={({ isActive }) =>
                 `font-semibold flex items-center gap-2 px-3 py-2 rounded-md transition-colors ${
                   isActive
-                    ? "bg-blue-500 text-white hover:bg-blue-600"
+                    ? "bg-primary text-white hover:bg-orange-600"
                     : "hover:bg-accent"
                 }`
               }
@@ -36,7 +36,7 @@ const CustomNavbar = () => {
               className={({ isActive }) =>
                 `font-semibold flex items-center gap-2 px-3 py-2 rounded-md transition-colors ${
                   isActive
-                    ? "bg-blue-500 text-white hover:bg-blue-600"
+                    ? "bg-primary text-white hover:bg-orange-600"
                     : "hover:bg-accent"
                 }`
               }

@@ -21,6 +21,7 @@ const FiltersGames = () => {
 
 
   const consoles = [
+    "Mobile",
     "Nintendo Switch",
     "Nintendo Switch 2",
     "PC",
