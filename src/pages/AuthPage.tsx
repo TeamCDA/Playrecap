@@ -5,13 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 const AuthPage = () => {
   const { t } = useTranslation()
-  const navigate = useNavigate()
+ const navigate = useNavigate()  
 
   return (
     <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button onClick={() => navigate("/home")}>
+      <Button onClick={() => navigate("/profile")}>
         <Gamepad2 /> PlayRecap | {t("TEST")}
       </Button>
+      <p>YOoooooooooooooooo</p>
     </div>
   );
 };
