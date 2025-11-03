@@ -188,3 +188,11 @@
     letter-spacing: var(--tracking-normal);
   }
 }
+
+@layer components {
+    /* FOR CONTENU OF THE PAGE */
+      .title {
+        @apply h-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+        /* h-full max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 */
+        }
+    }
