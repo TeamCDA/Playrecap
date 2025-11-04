@@ -1,5 +1,7 @@
 
 import CustomHeader from "@/components/Custom/CustomHeader";
+import { Input } from "@/components/ui/input"
+
 
 const Profile = () => {
 
@@ -15,6 +17,11 @@ const Profile = () => {
   className=""
   subtitle="testtttt"
 />
+
+    <div className="grid w-full max-w-sm items-center gap-3">
+     
+<Input type="email" placeholder="Email" />
+    </div>
 </div>
   )
 }
