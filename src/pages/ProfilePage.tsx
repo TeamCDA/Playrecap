@@ -1,5 +1,5 @@
 
-import CustomHeader from "@/components/Custom/CustomHeader";
+import CustomHeader from "@/components/custom/CustomHeader";
 import { Input } from "@/components/ui/input"
 
 
