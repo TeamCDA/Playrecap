@@ -1,4 +1,4 @@
-import CustomButton from './customButton'
+import CustomButton from './CustomButton'
 
 interface CustomHeaderProps {
   title: string;
