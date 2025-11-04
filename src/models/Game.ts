@@ -1,39 +1,39 @@
-import Console from "./Console";
+export default class Game {
+  id: number;
+  title: string;
+  hourPlay?: number | null;
+  isFavor: boolean;
+  rating?: number | null;
+  note?: string | null;
+  completionDate?: string;
+  type: string;
+  console: string;
+  platform: string;
+  year: number;
 
-export default class Game{
-
-    
-     id : number;
-    name : string;
-    hourPlay : number;
-    isFavor: boolean;
-    star : number;
-    note: string;
-    isFinish : Date;
-    type: string;
-    console:Console;
-
-constructor(
-
-    id : number,
-    name: string,
-     hourPlay : number,
+  constructor(
+    id: number,
+    title: string,
+    hourPlay: number,
     isFavor: boolean,
-    star : number,
+    rating: number,
     note: string,
-    isFinish : Date,
+    completionDate: string,
     type: string,
-    console:Console
-){
+    console: string,
+    platform: string,
+    year: number
+  ) {
     this.id = id;
-    this.name = name;
+    this.title = title;
     this.hourPlay = hourPlay;
     this.isFavor = isFavor;
-    this.star = star;
+    this.rating = rating;
     this.note = note;
-    this.isFinish = isFinish;
+    this.completionDate = completionDate;
     this.type = type;
     this.console = console;
-}
-
+    this.year = year;
+    this.platform = platform;
+  }
 }

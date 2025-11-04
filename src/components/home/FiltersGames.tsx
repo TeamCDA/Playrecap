@@ -42,7 +42,7 @@ const FiltersGames = () => {
         <CustomSearchInput setSearch={setSearchTerm} />
 
         <Select value={selectedYear} onValueChange={setSelectedYear}>
-          <SelectTrigger className="bg-card border-border text-foreground w-60 max-xl:w-44">
+          <SelectTrigger className="bg-card border-border text-foreground w-60 max-xl:w-30">
             <SelectValue placeholder="Toutes les années" />
           </SelectTrigger>
           <SelectContent className="bg-popover border-border">
