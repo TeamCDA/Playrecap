@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import { Button } from "../ui/button";
 
 const FiltersGames = () => {
     const date = new Date();
@@ -18,6 +19,12 @@ const FiltersGames = () => {
   const [years, setYears] = useState<number[]>([
     2025, 2026, 2027, 2028
   ]);
+
+  const handleReset = () => {
+    setSearchTerm("")
+    setSelectedYear(year.toString())
+    setSelectedConsole("all")
+  }
 
 
   const consoles = [
@@ -80,6 +87,8 @@ const FiltersGames = () => {
             ))}
           </SelectContent>
         </Select>
+
+        <Button variant={"ghost"} onClick={handleReset}>Reset</Button>
       </div>
 
       <div>

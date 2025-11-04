@@ -8,7 +8,7 @@ export default class Game {
   completionDate?: string;
   type: string;
   console: string;
-  platform: string;
+  platformBuy: string;
   year: number;
 
   constructor(
@@ -21,7 +21,7 @@ export default class Game {
     completionDate: string,
     type: string,
     console: string,
-    platform: string,
+    platformBuy: string,
     year: number
   ) {
     this.id = id;
@@ -34,6 +34,6 @@ export default class Game {
     this.type = type;
     this.console = console;
     this.year = year;
-    this.platform = platform;
+    this.platformBuy = platformBuy;
   }
 }

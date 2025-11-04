@@ -16,6 +16,8 @@ const CardGame = ({ game }: GameProps) => {
           <div className="flex-1">
             <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
               {game.title}
+              {game.type === "dlc" && <span className="text-xs text-muted-foreground">{" "}(DLC)</span>}
+              {game.type === "+dlc" && <span className="text-xs">{" "}(+DLC)</span>}
             </h3>
             <div className="flex items-center gap-2 flex-wrap">
               <span
@@ -32,7 +34,7 @@ const CardGame = ({ game }: GameProps) => {
               )}
               <span className="text-sm text-muted-foreground">{game.year}</span>
               <span className="text-sm text-muted-foreground capitalize">
-                {game.platform}
+                {game.platformBuy}
               </span>
             </div>
           </div>
