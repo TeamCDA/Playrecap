@@ -1,11 +1,13 @@
 import { ThemeProvider } from "./components/theme-provider";
-import RouterApp from "./routes/RouterApp";
+import AnimatedRoutes from "./routes/AnimatedRoutes";
+// import RouterApp from "./routes/RouterApp";
 
 function App() {
   return (
     <>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <RouterApp />
+        {/* <RouterApp /> */}
+        <AnimatedRoutes />
       </ThemeProvider>
     </>
   );

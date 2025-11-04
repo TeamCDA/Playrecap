@@ -24,7 +24,7 @@ const AuthPage = () => {
         </CardHeader>
 
         <CardContent>
-          <form className="space-y-4">
+          <div className="space-y-4">
             {!isLogin && (
               <div>
                 <Label htmlFor="username" className="p-2">
@@ -66,7 +66,7 @@ const AuthPage = () => {
               ) }
             </div>
 
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full" onClick={() => navigate("/home")}>
               {isLogin ? 'Se connecter' : "S'inscrire"}
             </Button>
 
@@ -93,7 +93,7 @@ const AuthPage = () => {
                 </>
               )}
             </p>
-          </form>
+          </div>
         </CardContent>
       </Card>
     </div>
