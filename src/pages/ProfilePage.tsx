@@ -1,4 +1,4 @@
-import CustomHeader from "@/components/custom/CustomHeader";
+import CustomHeader from "@/components/CustomHeader";
 import CustomNavbar from "@/components/layout/CustomNavbar";
 import { Input } from "@/components/ui/input";
 
