@@ -1,29 +1,25 @@
-
 import CustomHeader from "@/components/custom/CustomHeader";
-import { Input } from "@/components/ui/input"
-
+import CustomNavbar from "@/components/layout/CustomNavbar";
+import { Input } from "@/components/ui/input";
 
 const Profile = () => {
-
-
-
-
   return (
- <div className="contenu">
+    <div>
+      <CustomNavbar />
+      <div className="contenu">
+        <CustomHeader
+          title="wewewe"
+          titleButton="Ajouter Test"
+          className=""
+          subtitle="testtttt"
+        />
 
-  <CustomHeader
-  title="wewewe"
-  titleButton="Ajouter Test"
-  className=""
-  subtitle="testtttt"
-/>
-
-    <div className="grid w-full max-w-sm items-center gap-3">
-     
-<Input type="email" placeholder="Email" />
+        <div className="grid w-full max-w-sm items-center gap-3">
+          <Input type="email" placeholder="Email" />
+        </div>
+      </div>
     </div>
-</div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;
