@@ -1,25 +1,43 @@
+import CardStats from "@/components/CardStats";
 import CustomHeader from "@/components/CustomHeader";
 import CustomNavbar from "@/components/layout/CustomNavbar";
-import { Input } from "@/components/ui/input";
+import { Calendar, LogOut  } from 'lucide-react';
+import { useNavigate } from "react-router-dom"
+import { Gamepad2 } from 'lucide-react';
 
 const Profile = () => {
+
+    const navigate = useNavigate()
+
   return (
     <div>
       <CustomNavbar />
-      <div className="contenu">
-        <CustomHeader
-          title="wewewe"
-          titleButton="Ajouter Test"
-          className=""
-          subtitle="testtttt"
-        />
+      <div className="contenu py-5">
+       <div className="mt-4">
 
-        <div className="grid w-full max-w-sm items-center gap-3">
-          <Input type="email" placeholder="Email" />
-        </div>
+         <CustomHeader
+          title="Mes Statistiques"
+          titleButton="Deconexion"
+          iconRight={<LogOut />}
+         onClick={() => navigate("/")} 
+        />
+       </div>
+    
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <CardStats
+     icon={<Gamepad2/>}
+        title="Total de jeux"
+        stats={4}/>
+        <CardStats
+           icon={<Calendar/>}
+        title="Cette année"
+        stats="oui"/>
       </div>
+        </div>
     </div>
   );
 };
+
+
 
 export default Profile;
