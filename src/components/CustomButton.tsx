@@ -6,6 +6,11 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
+/*    <Button onClick={onClick}> 
+      {iconLeft && <span className="mr-2">{iconLeft}</span>}
+       {titleButton}  
+        {iconRight && <span className="mr-2">{iconRight}</span>}
+      </Button>*/
 const CustomButton = ({  title, className, onClick }: ButtonProps) => {
   return (
 
