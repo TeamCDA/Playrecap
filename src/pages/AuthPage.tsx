@@ -1,101 +1,99 @@
+
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Field, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { InputGroup, InputGroupAddon, InputGroupButton, InputGroupInput } from "@/components/ui/input-group";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Eye, EyeOff} from "lucide-react";
 import { useState } from "react";
-import {  useNavigate } from 'react-router-dom';
 
 
 
 const AuthPage = () => {
 
-    const [isLogin, setIsLogin] = useState(true)
+  const [showPassword, setShowPassword] = useState(false)
+   /* const [isLogin, setIsLogin] = useState(true)
 
     const navigate = useNavigate()
-  const toggleForm = () => setIsLogin(!isLogin)
+  const toggleForm = () => setIsLogin(!isLogin) */
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-background">
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle className="text-center">
-            {isLogin ? 'Se connecter' : "S'inscrire"}
-          </CardTitle>
-        </CardHeader>
+    <div className="flex items-center justify-center min-h-screen">
+    <Tabs defaultValue="login">
+      <TabsList className="bg-muted p-1 rounded-md grid w-full grid-cols-2 ">
+        <TabsTrigger value="login" >Connexion</TabsTrigger>
+        <TabsTrigger value="signin">Inscription</TabsTrigger>
+      </TabsList>
 
-        <CardContent>
-          <form className="space-y-4">
-            {!isLogin && (
-              <div>
-                <Label htmlFor="username" className="p-2">
-                 Username
-                </Label>
-                <Input
-                  id="username"
-                  type="text"
-                  placeholder="pseudo"
-                  required
-                />
-              </div>
-            )}
-
-            <div>
-              <Label htmlFor="loginEmail" className="p-2">
-                Email
-              </Label>
-              <Input
-                id="loginEmail"
-                type="email"
-                placeholder="votre@email.com"
-                required
-              />
-            </div>
-
-            <div>
-              <Label htmlFor="loginPassword" className="p-2">
-                Mot de passe
-              </Label>
-              <Input
-                id="loginPassword"
-                type="password"
-                placeholder="Mot de passe"
-                required
-              />
-              {isLogin && (
-                <p onClick={() => navigate("/forgotPassword")}> Mots de pass oublier ? </p>
-              ) }
-            </div>
-
-            <Button type="submit" className="w-full">
-              {isLogin ? 'Se connecter' : "S'inscrire"}
-            </Button>
-
-            <p className="text-center text-sm">
-              {isLogin ? (
-                <>
-                  Vous n'êtes pas inscrit ?{' '}
-                  <span
-                    onClick={toggleForm}
-                    className="text-amber-400 cursor-pointer hover:underline"
-                  >
-                    Cliquez ici !
-                  </span>
-                </>
-              ) : (
-                <>
-                  Déjà un compte ?{' '}
-                  <span
-                    onClick={toggleForm}
-                    className="text-amber-400 cursor-pointer hover:underline"
-                  >
-                    Se connecter
-                  </span>
-                </>
-              )}
-            </p>
-          </form>
-        </CardContent>
-      </Card>
+      <TabsContent value="login" className="">
+        <Field>
+          <FieldLabel>Email</FieldLabel>
+          <Input id="Email" type="email" placeholder="Mettez votre email" required/>
+        </Field>
+  <Field>
+      <FieldLabel>Password</FieldLabel>
+      <InputGroup>
+        <InputGroupInput
+          id="password"
+          type={showPassword ? "text" : "password"}
+          placeholder="************"
+        />  
+        <InputGroupAddon align="inline-end">
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <InputGroupButton
+                onClick={() => setShowPassword(!showPassword)}
+                size="icon-xs"
+                className="rounded-full"
+              >
+                {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+              </InputGroupButton>
+            </TooltipTrigger>
+            <TooltipContent>
+              {showPassword ? "Masquer le mot de passe" : "Afficher le mot de passe"}
+            </TooltipContent>
+          </Tooltip>
+        </InputGroupAddon>
+      </InputGroup>
+    </Field>
+    <Button className="w-full mt-5">Se connecter</Button>
+      </TabsContent>
+      
+      <TabsContent value="signin" className="">
+        <Field>
+          <FieldLabel>Email</FieldLabel>
+          <Input id="Email" type="email" placeholder="Mettez votre email" required/>
+        </Field>
+  <Field>
+      <FieldLabel>Password</FieldLabel>
+      <InputGroup>
+        <InputGroupInput
+          id="password"
+          type={showPassword ? "text" : "password"}
+          placeholder="************"
+        />  
+        <InputGroupAddon align="inline-end">
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <InputGroupButton
+                onClick={() => setShowPassword(!showPassword)}
+                size="icon-xs"
+                className="rounded-full"
+              >
+                {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+              </InputGroupButton>
+            </TooltipTrigger>
+            <TooltipContent>
+              {showPassword ? "Masquer le mot de passe" : "Afficher le mot de passe"}
+            </TooltipContent>
+          </Tooltip>
+        </InputGroupAddon>
+      </InputGroup>
+    </Field>
+    <Button className="w-full mt-5">Se connecter</Button>
+      </TabsContent>
+    </Tabs>
     </div>
 
   );
