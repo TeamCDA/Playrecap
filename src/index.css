@@ -192,7 +192,7 @@
 @layer components {
     /* FOR CONTENU OF THE PAGE */
       .contenu {
-        @apply h-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+        @apply h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
         /* h-full max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 */
         }
     }

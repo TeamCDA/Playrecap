@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import { Button } from "../ui/button";
 
 const FiltersGames = () => {
     const date = new Date();
@@ -18,6 +19,12 @@ const FiltersGames = () => {
   const [years, setYears] = useState<number[]>([
     2025, 2026, 2027, 2028
   ]);
+
+  const handleReset = () => {
+    setSearchTerm("")
+    setSelectedYear(year.toString())
+    setSelectedConsole("all")
+  }
 
 
   const consoles = [
@@ -42,7 +49,7 @@ const FiltersGames = () => {
         <CustomSearchInput setSearch={setSearchTerm} />
 
         <Select value={selectedYear} onValueChange={setSelectedYear}>
-          <SelectTrigger className="bg-card border-border text-foreground w-60 max-xl:w-44">
+          <SelectTrigger className="bg-card border-border text-foreground w-60 max-xl:w-30">
             <SelectValue placeholder="Toutes les années" />
           </SelectTrigger>
           <SelectContent className="bg-popover border-border">
@@ -80,6 +87,8 @@ const FiltersGames = () => {
             ))}
           </SelectContent>
         </Select>
+
+        <Button variant={"ghost"} onClick={handleReset}>Reset</Button>
       </div>
 
       <div>
