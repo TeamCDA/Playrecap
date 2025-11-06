@@ -14,7 +14,7 @@ const CardGame = ({ game }: GameProps) => {
       <div className="p-6">
         <div className="flex justify-between items-start mb-4">
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+            <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors capitalize">
               {game.title}
               {game.type === "dlc" && (
                 <span className="text-xs text-muted-foreground"> (DLC)</span>
