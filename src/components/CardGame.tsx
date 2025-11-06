@@ -4,11 +4,12 @@ import { Card } from "./ui/card";
 
 type GameProps = {
   game: Game;
+  onClick: () => void;
 };
-const CardGame = ({ game }: GameProps) => {
+const CardGame = ({ game, onClick }: GameProps) => {
   return (
     <Card
-      onClick={() => alert("edit")}
+    onClick={onClick}
       className="hover:cursor-pointer group relative overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
     >
       <div className="p-6">

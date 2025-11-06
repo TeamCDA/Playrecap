@@ -19,7 +19,8 @@ const FiltersGames = ({ games } : filterProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedYear, setSelectedYear] = useState<string>(year.toString());
   const [selectedConsole, setSelectedConsole] = useState<string>("all");
-  const [years, setYears] = useState<number[]>([2025, 2026, 2027, 2028]);
+  // const [years, setYears] = useState<number[]>([2025, 2026, 2027, 2028]);
+  const years = [2025, 2026, 2027, 2028];
 
   const handleReset = () => {
     setSearchTerm("");
@@ -91,7 +92,7 @@ const FiltersGames = ({ games } : filterProps) => {
           </SelectContent>
         </Select>
 
-        <Button variant={"ghost"} onClick={handleReset}>
+        <Button variant={"secondary"} onClick={handleReset}>
           Reset
         </Button>
       </div>
