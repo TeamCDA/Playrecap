@@ -1,4 +1,4 @@
-import AddGameDialog from "@/components/AddGameDialog";
+import AddGameDialog from "@/components/dialogs/AddGameDialog";
 import CardGame from "@/components/CardGame";
 import FiltersGames from "@/components/home/FiltersGames";
 import CustomNavbar from "@/components/layout/CustomNavbar";
