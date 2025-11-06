@@ -54,17 +54,17 @@ const AddGameDialog = ({
         </DialogHeader>
         <form>
           <div className="grid gap-4">
-            <div className="grid gap-3">
+            <div className="grid gap-2">
               <Label htmlFor="name-1">Name</Label>
-              <Input id="name-1" name="name" />
+              <Input id="name-1" name="name" value={game ? game.title : ""} />
             </div>
-            <div className="grid gap-3">
+            <div className="grid gap-2">
               <Label htmlFor="username-1">Username</Label>
               <Input id="username-1" name="username" />
             </div>
           </div>
           <DialogFooter>
-            <div className={`${isEditMode && 'flex justify-between w-full'} mt-5`}>
+            <div className={`${isEditMode && 'flex justify-between w-full'} mt-8`}>
               {isEditMode && <Button type="button" variant={"destructive"} onClick={() => alert("delete")}>Delete</Button>}
               <div className="flex gap-2">
                 <DialogClose asChild>
