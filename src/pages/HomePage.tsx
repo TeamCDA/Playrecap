@@ -25,7 +25,6 @@ const HomePage = () => {
 
   const handleDialogClose = () => {
     setIsDialogOpen(false);
-    setSelectedGame(null);
   };
 
   return (
