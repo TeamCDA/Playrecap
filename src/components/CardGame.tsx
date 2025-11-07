@@ -1,9 +1,6 @@
 import Game from "@/models/Game";
 import { Card } from "./ui/card";
-import {
-  CheckCircleIcon,
-  NotebookText,
-} from "lucide-react";
+import { CheckCircleIcon, NotebookText } from "lucide-react";
 import ConsoleName from "./ConsoleName";
 
 type GameProps = {
@@ -19,22 +16,14 @@ const CardGame = ({ game, onClick }: GameProps) => {
       <div className="px-6 py-2">
         <div className="flex justify-between items-start mb-2">
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors capitalize">
+            <h3 title={game.title} className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors capitalize truncate lg:w-[15rem] w-[90%]">
               {game.title}
-              {game.type === "dlc" && (
+              {/* {game.type === "dlc" && (
                 <span className="text-xs text-muted-foreground"> (DLC)</span>
               )}
-              {game.type === "+dlc" && <span className="text-xs"> (+DLC)</span>}
+              {game.type === "+dlc" && <span className="text-xs"> (+DLC)</span>} */}
             </h3>
             <div className="flex items-center gap-2 flex-wrap -ml-1">
-              {/* TODO console status => faire un composant */}
-              {/* <span
-                className={`text-xs px-3 py-1 rounded-full font-medium capitalize ${getConsoleColor(
-                  game.console
-                )}`}
-              >
-                {game.console}
-              </span> */}
               <ConsoleName console={game.console} />
               {game.hourPlay && (
                 <span className="text-sm text-muted-foreground">
@@ -45,6 +34,10 @@ const CardGame = ({ game, onClick }: GameProps) => {
               {/* <span className="text-sm text-muted-foreground capitalize">
                 {game.platformBuy}
               </span> */}
+              {game.type === "dlc" && (
+                <span className="text-xs text-muted-foreground"> (DLC)</span>
+              )}
+              {game.type === "+dlc" && <span className="text-xs"> (+DLC)</span>}
             </div>
           </div>
         </div>
