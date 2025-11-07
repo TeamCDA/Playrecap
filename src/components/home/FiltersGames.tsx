@@ -8,6 +8,7 @@ import {
   SelectValue,
 } from "../ui/select";
 import { Button } from "../ui/button";
+import { consoleList } from "@/helpers/ConsoleList";
 
 type filterProps = {
   games: number
@@ -27,21 +28,6 @@ const FiltersGames = ({ games } : filterProps) => {
     setSelectedYear(year.toString());
     setSelectedConsole("all");
   };
-
-  const consoles = [
-    "Mobile",
-    "Nintendo Switch",
-    "Nintendo Switch 2",
-    "PC",
-    "Playstation 3",
-    "Playstation 4",
-    "Playstation 5",
-    "Xbox 360",
-    "Xbox One",
-    "Xbox Series X",
-    "Xbox Series S",
-    "Autre",
-  ];
 
   return (
     <div>
@@ -80,7 +66,7 @@ const FiltersGames = ({ games } : filterProps) => {
             >
               Toutes les consoles
             </SelectItem>
-            {consoles.map((console) => (
+            {consoleList.map((console) => (
               <SelectItem
                 key={console}
                 value={console}
