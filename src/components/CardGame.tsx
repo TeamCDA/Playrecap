@@ -17,7 +17,7 @@ const CardGame = ({ game, onClick }: GameProps) => {
       className="hover:cursor-pointer group relative overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
     >
       <div className="px-6 py-2">
-        <div className="flex justify-between items-start mb-4">
+        <div className="flex justify-between items-start mb-2">
           <div className="flex-1">
             <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors capitalize">
               {game.title}
