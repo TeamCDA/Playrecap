@@ -1,19 +1,19 @@
-// import { Navigate } from "react-router-dom"
-// import { useAuth } from "@/context/AuthContext"
+import { Navigate } from "react-router-dom"
+import { useAuth } from "@/contexts/AuthContext"
 import type { JSX } from "react"
-// import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next"
 
 export default function PrivateRoute({ children }: { children: JSX.Element }) {
-//   const { user, loading } = useAuth()
-//   const { t } = useTranslation()
+  const { user, loading } = useAuth()
+  const { t } = useTranslation()
 
-//   if (loading) {
-//     return <div className="text-center">{t("LOADING")}...</div>
-//   }
+  if (loading) {
+    return <div className="text-center">{t("LOADING")}...</div>
+  }
 
-//   if (!user) {
-//     return <Navigate to="/" replace />
-//   }
+  if (!user) {
+    return <Navigate to="/" replace />
+  }
 
   return children
 }

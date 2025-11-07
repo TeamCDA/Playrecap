@@ -1,5 +1,4 @@
 {
-  "TEST": "english test",
   "ERROR": {
     "REQUEST": {
       "badRequest": "Invalid request. Please check your input.",
@@ -14,5 +13,7 @@
       "uniqueConstraint": "This value already exists.",
       "unknown": "An unknown error occurred."
     }
-  }
+  },
+  "LOADING": "Loading",
+  "TEST": "english test"
 }
