@@ -1,6 +1,5 @@
 {
-  "TEST": "test français",
-    "ERROR": {
+  "ERROR": {
     "REQUEST": {
       "badRequest": "Requête invalide. Vérifie les informations saisies.",
       "checkConstraint": "Valeur invalide pour ce champ.",
@@ -14,5 +13,7 @@
       "uniqueConstraint": "Cette valeur existe déjà.",
       "unknown": "Une erreur inconnue est survenue."
     }
-  }
+  },
+  "LOADING": "Chargement",
+  "TEST": "test français"
 }
