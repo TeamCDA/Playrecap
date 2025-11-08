@@ -15,18 +15,6 @@ export const GamesMockList: Game[] = [
   },
   {
     id: 2,
-    title: "Digimon Time stranger",
-    hourPlay: 30,
-    isFavor: false,
-    note: "",
-    completionDate: "",
-    type: "game",
-    console: "pc",
-    year: 2025,
-    platformBuy: "steam",
-  },
-  {
-    id: 3,
     title: "Arc Raiders",
     hourPlay: null,
     isFavor: false,
@@ -38,7 +26,7 @@ export const GamesMockList: Game[] = [
     platformBuy: "steam",
   },
   {
-    id: 4,
+    id: 3,
     title: "Battlefiled 6",
     hourPlay: null,
     isFavor: false,
@@ -50,7 +38,7 @@ export const GamesMockList: Game[] = [
     platformBuy: "xbox store",
   },
     {
-    id: 5,
+    id: 4,
     title: "Star Wars Outlaws: A Pirate’s Fortune",
     hourPlay: 5,
     isFavor: false,

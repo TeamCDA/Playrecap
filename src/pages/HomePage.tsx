@@ -5,6 +5,7 @@ import CustomNavbar from "@/components/layout/CustomNavbar";
 import { GamesMockList } from "@/helpers/GamesMockList";
 import type Game from "@/models/Game";
 import { useState } from "react";
+import CardTestGame from "@/components/CardTestGame";
 
 const HomePage = () => {
   const list = GamesMockList;
@@ -45,6 +46,15 @@ const HomePage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {list.map((game) => (
             <CardGame
+              key={game.id}
+              game={game}
+              onClick={() => handleGameClick(game)}
+            />
+          ))}
+        </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+          {list.map((game) => (
+            <CardTestGame
               key={game.id}
               game={game}
               onClick={() => handleGameClick(game)}
