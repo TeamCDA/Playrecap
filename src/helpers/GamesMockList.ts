@@ -18,7 +18,7 @@ export const GamesMockList: Game[] = [
     title: "Arc Raiders",
     hourPlay: null,
     isFavor: false,
-    note: "",
+    note: "fais en solo",
     completionDate: "",
     type: "game",
     console: "pc",
