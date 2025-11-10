@@ -14,6 +14,8 @@ import { ArrowLeftIcon, TrashIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const DeleteUserDialog = () => {
+  // const { removeUser } = useProfile();
+
   const { t } = useTranslation();
   return (
     <AlertDialog>
@@ -33,7 +35,7 @@ const DeleteUserDialog = () => {
             {t("BUTTON.CANCEL")}
           </AlertDialogCancel>
           <AlertDialogAction asChild>
-            <Button variant="destructive">
+            <Button variant="destructive" onClick={() => alert("delete service")}>
               <TrashIcon />
               {t("DIALOG.DELETE.BUTTON")}
             </Button>
