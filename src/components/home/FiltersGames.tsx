@@ -10,12 +10,14 @@ import {
 import { Button } from "../ui/button";
 import { consoleList } from "@/helpers/ConsoleList";
 import TitleGamesList from "./TitleGamesList";
+import { useTranslation } from "react-i18next";
 
 type filterProps = {
   games: number;
 };
 
 const FiltersGames = ({ games }: filterProps) => {
+  const { t } = useTranslation();
   const date = new Date();
   const year = date.getFullYear();
   const [searchTerm, setSearchTerm] = useState("");
@@ -58,14 +60,14 @@ const FiltersGames = ({ games }: filterProps) => {
 
         <Select value={selectedConsole} onValueChange={setSelectedConsole}>
           <SelectTrigger className="bg-card border-border text-foreground w-60 max-xl:w-44">
-            <SelectValue placeholder="Toutes les consoles" />
+            <SelectValue placeholder={t("CONSOLE.FILTER")} />
           </SelectTrigger>
           <SelectContent className="bg-popover border-border">
             <SelectItem
               value="all"
               className="text-foreground hover:bg-accent mb-2"
             >
-              Toutes les consoles
+              {t("CONSOLE.FILTER")}
             </SelectItem>
             {consoleList.map((console) => (
               <SelectItem

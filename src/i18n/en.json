@@ -5,6 +5,9 @@
     },
     "CANCEL": "Cancel"
   },
+  "CONSOLE": {
+    "FILTER": "All consoles"
+  },
   "DIALOG": {
     "DELETE": {
       "BUTTON": "Delete your account",
@@ -36,6 +39,9 @@
       "GAMES": "My games of",
       "ON": "on"
     }
+  },
+  "INPUT": {
+    "SEARCH": "Search games..."
   },
   "LOADING": "Loading",
   "NAVBAR": {

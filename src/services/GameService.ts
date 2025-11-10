@@ -9,3 +9,13 @@ export const getGames = async (userId: string) => {
   if (error) throw new Error(error.message);
   return data;
 };
+
+// ❌ Supprimer dans la table "game" par id
+export const deleteGame = async (id: number, userId: string) => {
+  const { error } = await supabase
+    .from("game")
+    .delete()
+    .eq("id", id)
+    .eq("user_id", userId);
+  if (error) throw new Error(error.message);
+};

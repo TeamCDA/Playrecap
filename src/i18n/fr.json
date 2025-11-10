@@ -5,6 +5,9 @@
     },
     "CANCEL": "Annuler"
   },
+  "CONSOLE": {
+    "FILTER": "Toutes les consoles"
+  },
   "DIALOG": {
     "DELETE": {
       "BUTTON": "Supprimer votre compte",
@@ -36,6 +39,9 @@
       "GAMES": "Mes jeux de",
       "ON": "sur"
     }
+  },
+  "INPUT": {
+    "SEARCH": "Rechercher des jeux..."
   },
   "LOADING": "Chargement",
   "NAVBAR": {
