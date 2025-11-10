@@ -12,6 +12,10 @@
       "TITLE": "En êtes-vous absolument sûr ?"
     }
   },
+  "EMPTY": {
+    "MESSAGE": "Vous n'avez encore ajouté aucun jeu. Commencez par ajouter votre premier jeu.",
+    "TITLE": "Pas encore de jeux"
+  },
   "ERROR": {
     "REQUEST": {
       "badRequest": "Requête invalide. Vérifie les informations saisies.",

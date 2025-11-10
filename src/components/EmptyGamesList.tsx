@@ -9,18 +9,19 @@ import {
   EmptyTitle,
 } from "@/components/ui/empty";
 import AddGameDialog from "./dialogs/AddGameDialog";
+import { useTranslation } from "react-i18next";
 
 const EmptyGamesList = () => {
+  const { t } = useTranslation();
   return (
     <Empty>
       <EmptyHeader>
         <EmptyMedia variant="icon">
           <Gamepad2 />
         </EmptyMedia>
-        <EmptyTitle>No games yet</EmptyTitle>
+        <EmptyTitle>{t("EMPTY.TITLE")}</EmptyTitle>
         <EmptyDescription>
-          You haven&apos;t added any games yet. Get started by add
-          your first game.
+          {t("EMPTY.MESSAGE")}
         </EmptyDescription>
       </EmptyHeader>
       <EmptyContent>
