@@ -5,6 +5,7 @@ import { GamesMockList } from "@/helpers/GamesMockList";
 import type Game from "@/models/Game";
 import { useState } from "react";
 import CardTestGame from "@/components/CardTestGame";
+import EmptyGamesList from "@/components/EmptyGamesList";
 
 const HomePage = () => {
   const list = GamesMockList;
@@ -61,6 +62,8 @@ const HomePage = () => {
       <div className="flex justify-center mt-10">
         <AddGameDialog isEditMode={false} />
       </div>
+
+      <EmptyGamesList />
     </div>
   );
 };
