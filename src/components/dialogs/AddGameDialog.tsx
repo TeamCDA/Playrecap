@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import type Game from "@/models/Game";
 import { Plus } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface AddGameDialogProps {
   //   onGameAdded: () => void;
@@ -28,6 +29,7 @@ const AddGameDialog = ({
   onOpenChange: externalOnOpenChange,
   isEditMode,
 }: AddGameDialogProps) => {
+  const { t } = useTranslation();
   const open = externalOpen;
   const setOpen = externalOnOpenChange;
 
@@ -37,7 +39,7 @@ const AddGameDialog = ({
         <DialogTrigger asChild>
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Plus className="h-5 w-5" />
-            Ajouter un jeu
+            {t("BUTTON.ADD.GAME")}
           </Button>
         </DialogTrigger>
       )}
