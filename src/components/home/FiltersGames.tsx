@@ -9,12 +9,13 @@ import {
 } from "../ui/select";
 import { Button } from "../ui/button";
 import { consoleList } from "@/helpers/ConsoleList";
+import TitleGamesList from "./TitleGamesList";
 
 type filterProps = {
-  games: number
-}
+  games: number;
+};
 
-const FiltersGames = ({ games } : filterProps) => {
+const FiltersGames = ({ games }: filterProps) => {
   const date = new Date();
   const year = date.getFullYear();
   const [searchTerm, setSearchTerm] = useState("");
@@ -83,14 +84,15 @@ const FiltersGames = ({ games } : filterProps) => {
         </Button>
       </div>
 
-      <p>{searchTerm ? searchTerm : "all"} {selectedYear} {selectedConsole}</p>
+      <p>
+        {searchTerm ? searchTerm : "all"} {selectedYear} {selectedConsole}
+      </p>
 
-      <div className="mb-3">
-        <p className="text-2xl font-semibold">
-          {/* TODO mettre titre + nombre de jeux dans la list => Mes jeux (de 2025 (5) ) */}
-          Mes Jeux de {selectedYear} ({games})
-        </p>
-      </div>
+      <TitleGamesList
+        selectedYear={selectedYear}
+        selectedConsole={selectedConsole}
+        games={games}
+      />
     </div>
   );
 };
