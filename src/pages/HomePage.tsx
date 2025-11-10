@@ -1,7 +1,6 @@
 import AddGameDialog from "@/components/dialogs/AddGameDialog";
 import CardGame from "@/components/CardGame";
 import FiltersGames from "@/components/home/FiltersGames";
-import CustomNavbar from "@/components/layout/CustomNavbar";
 import { GamesMockList } from "@/helpers/GamesMockList";
 import type Game from "@/models/Game";
 import { useState } from "react";
@@ -29,41 +28,37 @@ const HomePage = () => {
   };
 
   return (
-    <div>
-      <CustomNavbar />
-      <div className="contenu">
-        <div className="mt-5">
-          <FiltersGames games={list.length} />
-        </div>
-
-        <AddGameDialog
-          game={selectedGame}
-          open={isDialogOpen}
-          onOpenChange={handleDialogClose}
-          isEditMode={true}
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {list.map((game) => (
-            <CardGame
-              key={game.id}
-              game={game}
-              onClick={() => handleGameClick(game)}
-            />
-          ))}
-        </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
-          {list.map((game) => (
-            <CardTestGame
-              key={game.id}
-              game={game}
-              onClick={() => handleGameClick(game)}
-            />
-          ))}
-        </div>
+    <div className="contenu">
+      <div className="mt-5">
+        <FiltersGames games={list.length} />
       </div>
 
-      <div className="flex justify-center">
+      <AddGameDialog
+        game={selectedGame}
+        open={isDialogOpen}
+        onOpenChange={handleDialogClose}
+        isEditMode={true}
+      />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {list.map((game) => (
+          <CardGame
+            key={game.id}
+            game={game}
+            onClick={() => handleGameClick(game)}
+          />
+        ))}
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+        {list.map((game) => (
+          <CardTestGame
+            key={game.id}
+            game={game}
+            onClick={() => handleGameClick(game)}
+          />
+        ))}
+      </div>
+      <div className="flex justify-center mt-10">
         <AddGameDialog isEditMode={false} />
       </div>
     </div>
