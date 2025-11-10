@@ -1,6 +1,6 @@
 import { useAuth } from "@/contexts/AuthContext"
 import type Game from "@/models/Game"
-import { getGames } from "@/services/GameService"
+import { deleteGame, getGames } from "@/services/GameService"
 import { useCallback, useEffect, useState } from "react"
 
 export const useGame = () => {
@@ -22,6 +22,13 @@ const fetchGames = useCallback(async () => {
   }
 }, [user])
 
+//   supprimer une candidature
+  const removeGame = async (id: number) => {
+    if (!user) return
+    await deleteGame(id, user.id)
+    setGames((prev) => prev.filter((c) => c.id !== id))
+  }
+
 
 // Effect pour charger les données initiales
   useEffect(() => {
@@ -39,6 +46,7 @@ const fetchGames = useCallback(async () => {
 return {
     fetchGames,
     games,
-    loading
+    loading,
+    removeGame
 }
 }
