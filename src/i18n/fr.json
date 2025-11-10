@@ -15,5 +15,9 @@
     }
   },
   "LOADING": "Chargement",
+  "NAVBAR": {
+    "GAMES": "Jeux",
+    "PROFILE": "Profil"
+  },
   "TEST": "test français"
 }

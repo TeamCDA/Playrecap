@@ -15,5 +15,9 @@
     }
   },
   "LOADING": "Loading",
+  "NAVBAR": {
+    "GAMES": "Games",
+    "PROFILE": "Profile"
+  },
   "TEST": "english test"
 }
