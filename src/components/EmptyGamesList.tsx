@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, Gamepad2, Plus } from "lucide-react";
+import { ArrowUpRightIcon, Gamepad2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Empty,
@@ -8,6 +8,7 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
+import AddGameDialog from "./dialogs/AddGameDialog";
 
 const EmptyGamesList = () => {
   return (
@@ -24,7 +25,7 @@ const EmptyGamesList = () => {
       </EmptyHeader>
       <EmptyContent>
         <div className="flex gap-2">
-          <Button><Plus /> Add game</Button>
+          <AddGameDialog isEditMode={false} />
         </div>
       </EmptyContent>
       <Button
