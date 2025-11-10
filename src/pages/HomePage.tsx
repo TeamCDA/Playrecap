@@ -6,6 +6,7 @@ import type Game from "@/models/Game";
 import { useState } from "react";
 import CardTestGame from "@/components/CardTestGame";
 import EmptyGamesList from "@/components/EmptyGamesList";
+import DeleteUserDialog from "@/components/dialogs/DeleteUserDialog";
 
 const HomePage = () => {
   const list = GamesMockList;
@@ -40,6 +41,8 @@ const HomePage = () => {
         onOpenChange={handleDialogClose}
         isEditMode={true}
       />
+
+      <DeleteUserDialog />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {list.map((game) => (

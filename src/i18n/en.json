@@ -1,4 +1,14 @@
 {
+  "BUTTON": {
+    "CANCEL": "Cancel"
+  },
+  "DIALOG": {
+    "DELETE": {
+      "BUTTON": "Delete your account",
+      "MESSAGE": "This action cannot be undone. This will permanently delete your account and remove your data from our servers.",
+      "TITLE": "Are you absolutely sure?"
+    }
+  },
   "ERROR": {
     "REQUEST": {
       "badRequest": "Invalid request. Please check your input.",

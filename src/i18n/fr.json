@@ -1,4 +1,14 @@
 {
+  "BUTTON": {
+    "CANCEL": "Annuler"
+  },
+  "DIALOG": {
+    "DELETE": {
+      "BUTTON": "Supprimer votre compte",
+      "MESSAGE": "Cette action ne peut pas être annulée. Cela supprimera définitivement votre compte et effacera vos données de nos serveurs.",
+      "TITLE": "En êtes-vous absolument sûr ?"
+    }
+  },
   "ERROR": {
     "REQUEST": {
       "badRequest": "Requête invalide. Vérifie les informations saisies.",
