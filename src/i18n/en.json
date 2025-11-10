@@ -1,5 +1,8 @@
 {
   "BUTTON": {
+    "ADD": {
+      "GAME": "Add a game"
+    },
     "CANCEL": "Cancel"
   },
   "DIALOG": {
