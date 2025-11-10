@@ -7,7 +7,7 @@ const CustomNavbar = () => {
   return (
     <div className="bg-muted">
       <nav className="h-16 bg-background border-b">
-        <div className="h-full flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="h-full flex items-center justify-between max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex items-center gap-2 justify-center">
             <Gamepad2 size={30} />
@@ -16,7 +16,7 @@ const CustomNavbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 max-sm:gap-1">
             <NavLink
               to="/home"
               className={({ isActive }) =>
