@@ -3,7 +3,6 @@ export default class Game {
   title: string;
   hourPlay?: number | null;
   isFavor: boolean;
-  rating?: number | null;
   note?: string | null;
   completionDate?: string;
   type: string;
@@ -16,7 +15,6 @@ export default class Game {
     title: string,
     hourPlay: number,
     isFavor: boolean,
-    rating: number,
     note: string,
     completionDate: string,
     type: string,
@@ -28,7 +26,6 @@ export default class Game {
     this.title = title;
     this.hourPlay = hourPlay;
     this.isFavor = isFavor;
-    this.rating = rating;
     this.note = note;
     this.completionDate = completionDate;
     this.type = type;

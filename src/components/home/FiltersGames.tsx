@@ -8,39 +8,26 @@ import {
   SelectValue,
 } from "../ui/select";
 import { Button } from "../ui/button";
+import { consoleList } from "@/helpers/ConsoleList";
 
-const FiltersGames = () => {
-    const date = new Date();
-    const year = date.getFullYear();
+type filterProps = {
+  games: number
+}
 
+const FiltersGames = ({ games } : filterProps) => {
+  const date = new Date();
+  const year = date.getFullYear();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedYear, setSelectedYear] = useState<string>(year.toString());
   const [selectedConsole, setSelectedConsole] = useState<string>("all");
-  const [years, setYears] = useState<number[]>([
-    2025, 2026, 2027, 2028
-  ]);
+  // const [years, setYears] = useState<number[]>([2025, 2026, 2027, 2028]);
+  const years = [2025, 2026, 2027, 2028];
 
   const handleReset = () => {
-    setSearchTerm("")
-    setSelectedYear(year.toString())
-    setSelectedConsole("all")
-  }
-
-
-  const consoles = [
-    "Mobile",
-    "Nintendo Switch",
-    "Nintendo Switch 2",
-    "PC",
-    "Playstation 3",
-    "Playstation 4",
-    "Playstation 5",
-    "Xbox 360",
-    "Xbox One",
-    "Xbox Series X",
-    "Xbox Series S",
-    "Autre"
-  ];
+    setSearchTerm("");
+    setSelectedYear(year.toString());
+    setSelectedConsole("all");
+  };
 
   return (
     <div>
@@ -73,10 +60,13 @@ const FiltersGames = () => {
             <SelectValue placeholder="Toutes les consoles" />
           </SelectTrigger>
           <SelectContent className="bg-popover border-border">
-            <SelectItem value="all" className="text-foreground hover:bg-accent mb-2">
+            <SelectItem
+              value="all"
+              className="text-foreground hover:bg-accent mb-2"
+            >
               Toutes les consoles
             </SelectItem>
-            {consoles.map((console) => (
+            {consoleList.map((console) => (
               <SelectItem
                 key={console}
                 value={console}
@@ -88,12 +78,17 @@ const FiltersGames = () => {
           </SelectContent>
         </Select>
 
-        <Button variant={"ghost"} onClick={handleReset}>Reset</Button>
+        <Button variant={"secondary"} onClick={handleReset}>
+          Reset
+        </Button>
       </div>
 
-      <div>
-        <p>
-          {searchTerm ? searchTerm : "all"} {selectedYear} {selectedConsole}
+      <p>{searchTerm ? searchTerm : "all"} {selectedYear} {selectedConsole}</p>
+
+      <div className="mb-3">
+        <p className="text-2xl font-semibold">
+          {/* TODO mettre titre + nombre de jeux dans la list => Mes jeux (de 2025 (5) ) */}
+          Mes Jeux de {selectedYear} ({games})
         </p>
       </div>
     </div>

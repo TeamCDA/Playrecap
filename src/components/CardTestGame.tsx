@@ -7,7 +7,7 @@ type GameProps = {
   game: Game;
   onClick: () => void;
 };
-const CardGame = ({ game, onClick }: GameProps) => {
+const CardTestGame = ({ game, onClick }: GameProps) => {
   return (
     <Card
       onClick={onClick}
@@ -56,15 +56,16 @@ const CardGame = ({ game, onClick }: GameProps) => {
             <CheckCircleIcon
               className={`w-4 h-4 ${
                 game.completionDate
-                  ? "text-card-foreground"
-                  : "text-muted-foreground"
+                  ? "text-muted-foreground"
+                  : "text-muted"
               }`}
             />
           </p>
           <p title={`${game.note && "note"}`}>
             <NotebookText
               className={`w-4 h-4 ${
-                game.note ? "text-card-foreground" : "text-muted-foreground"
+                // game.note ? "text-card-foreground" : "text-muted-foreground"
+                game.note ? "text-muted-foreground" : "text-muted"
               }`}
             />
           </p>
@@ -85,4 +86,4 @@ const CardGame = ({ game, onClick }: GameProps) => {
   );
 };
 
-export default CardGame;
+export default CardTestGame;
