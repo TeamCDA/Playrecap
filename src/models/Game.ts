@@ -4,7 +4,7 @@ export default class Game {
   hourPlay?: number | null;
   isFavor: boolean;
   note?: string | null;
-  completionDate?: string;
+  finish: boolean;
   type: string;
   console: string;
   platformBuy: string;
@@ -16,7 +16,7 @@ export default class Game {
     hourPlay: number,
     isFavor: boolean,
     note: string,
-    completionDate: string,
+    finish: boolean,
     type: string,
     console: string,
     platformBuy: string,
@@ -27,7 +27,7 @@ export default class Game {
     this.hourPlay = hourPlay;
     this.isFavor = isFavor;
     this.note = note;
-    this.completionDate = completionDate;
+    this.finish = finish;
     this.type = type;
     this.console = console;
     this.year = year;
