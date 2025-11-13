@@ -10,5 +10,5 @@ export const consoleList = [
     "Xbox One",
     "Xbox Series X",
     "Xbox Series S",
-    "Autre",
+    "Others | Autres",
   ];

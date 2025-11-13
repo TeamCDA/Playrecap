@@ -1,4 +1,24 @@
 {
+  "BUTTON": {
+    "ADD": {
+      "GAME": "Add a game"
+    },
+    "CANCEL": "Cancel"
+  },
+  "CONSOLE": {
+    "FILTER": "All consoles"
+  },
+  "DIALOG": {
+    "DELETE": {
+      "BUTTON": "Delete your account",
+      "MESSAGE": "This action cannot be undone. This will permanently delete your account and remove your data from our servers.",
+      "TITLE": "Are you absolutely sure?"
+    }
+  },
+  "EMPTY": {
+    "MESSAGE": "You haven't added any games yet. Get started by add your first game.",
+    "TITLE": "No games yet"
+  },
   "ERROR": {
     "REQUEST": {
       "badRequest": "Invalid request. Please check your input.",
@@ -14,6 +34,19 @@
       "unknown": "An unknown error occurred."
     }
   },
+  "FILTER": {
+    "TITLE": {
+      "GAMES": "My games of",
+      "ON": "on"
+    }
+  },
+  "INPUT": {
+    "SEARCH": "Search games..."
+  },
   "LOADING": "Loading",
+  "NAVBAR": {
+    "GAMES": "Games",
+    "PROFILE": "Profile"
+  },
   "TEST": "english test"
 }

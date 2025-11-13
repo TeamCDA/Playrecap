@@ -1,4 +1,24 @@
 {
+  "BUTTON": {
+    "ADD": {
+      "GAME": "Ajouter un jeu"
+    },
+    "CANCEL": "Annuler"
+  },
+  "CONSOLE": {
+    "FILTER": "Toutes les consoles"
+  },
+  "DIALOG": {
+    "DELETE": {
+      "BUTTON": "Supprimer votre compte",
+      "MESSAGE": "Cette action ne peut pas être annulée. Cela supprimera définitivement votre compte et effacera vos données de nos serveurs.",
+      "TITLE": "En êtes-vous absolument sûr ?"
+    }
+  },
+  "EMPTY": {
+    "MESSAGE": "Vous n'avez encore ajouté aucun jeu. Commencez par ajouter votre premier jeu.",
+    "TITLE": "Pas encore de jeux"
+  },
   "ERROR": {
     "REQUEST": {
       "badRequest": "Requête invalide. Vérifie les informations saisies.",
@@ -14,6 +34,19 @@
       "unknown": "Une erreur inconnue est survenue."
     }
   },
+  "FILTER": {
+    "TITLE": {
+      "GAMES": "Mes jeux de",
+      "ON": "sur"
+    }
+  },
+  "INPUT": {
+    "SEARCH": "Rechercher des jeux..."
+  },
   "LOADING": "Chargement",
+  "NAVBAR": {
+    "GAMES": "Jeux",
+    "PROFILE": "Profil"
+  },
   "TEST": "test français"
 }
