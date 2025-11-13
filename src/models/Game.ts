@@ -4,10 +4,10 @@ export default class Game {
   hourPlay?: number | null;
   isFavor: boolean;
   note?: string | null;
-  finish: boolean;
+  isFinish: boolean;
   type: string;
   console: string;
-  platformBuy: string;
+  platformPlay: string;
   year: number;
 
   constructor(
@@ -16,10 +16,10 @@ export default class Game {
     hourPlay: number,
     isFavor: boolean,
     note: string,
-    finish: boolean,
+    isFinish: boolean,
     type: string,
     console: string,
-    platformBuy: string,
+    platformPlay: string,
     year: number
   ) {
     this.id = id;
@@ -27,10 +27,10 @@ export default class Game {
     this.hourPlay = hourPlay;
     this.isFavor = isFavor;
     this.note = note;
-    this.finish = finish;
+    this.isFinish = isFinish;
     this.type = type;
     this.console = console;
     this.year = year;
-    this.platformBuy = platformBuy;
+    this.platformPlay = platformPlay;
   }
 }
