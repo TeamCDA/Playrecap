@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CustomSearchInput from "../CustomSearchInput";
+import CustomSearchInput from "../customs/CustomSearchInput";
 import {
   Select,
   SelectContent,

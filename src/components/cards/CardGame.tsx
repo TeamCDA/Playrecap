@@ -1,7 +1,7 @@
 import Game from "@/models/Game";
-import { Card } from "./ui/card";
+import { Card } from "../ui/card";
 import { CheckCircleIcon, NotebookText } from "lucide-react";
-import ConsoleName from "./ConsoleName";
+import ConsoleName from "../game/ConsoleName";
 
 type GameProps = {
   game: Game;

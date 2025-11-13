@@ -1,5 +1,5 @@
-import CardStats from "@/components/CardStats";
-import CustomHeader from "@/components/CustomHeader";
+import CardStats from "@/components/cards/CardStats";
+import CustomHeader from "@/components/customs/CustomHeader";
 import { Calendar, LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Gamepad2 } from "lucide-react";
