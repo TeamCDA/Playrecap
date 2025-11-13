@@ -8,7 +8,7 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
-import AddGameDialog from "./dialogs/AddGameDialog";
+import AddGameDialog from "../dialogs/AddGameDialog";
 import { useTranslation } from "react-i18next";
 
 const EmptyGamesList = () => {

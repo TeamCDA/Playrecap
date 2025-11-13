@@ -1,11 +1,11 @@
 import AddGameDialog from "@/components/dialogs/AddGameDialog";
-import CardGame from "@/components/CardGame";
+import CardGame from "@/components/cards/CardGame";
 import FiltersGames from "@/components/home/FiltersGames";
 import { GamesMockList } from "@/helpers/GamesMockList";
 import type Game from "@/models/Game";
 import { useState } from "react";
-import CardTestGame from "@/components/CardTestGame";
-import EmptyGamesList from "@/components/EmptyGamesList";
+import CardTestGame from "@/components/cards/CardTestGame";
+import EmptyGamesList from "@/components/home/EmptyGamesList";
 import DeleteUserDialog from "@/components/dialogs/DeleteUserDialog";
 
 const HomePage = () => {

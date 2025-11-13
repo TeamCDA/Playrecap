@@ -34,7 +34,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "../ui/checkbox";
 import { useState } from "react";
-import GameTypeSelector from "../GameTypeSelector";
+import GameTypeSelector from "../game/GameTypeSelector";
 
 interface AddGameDialogProps {
   //   onGameAdded: () => void;
