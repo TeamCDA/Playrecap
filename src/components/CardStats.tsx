@@ -10,10 +10,10 @@ interface CardStatsProps {
 
 const CardStats = ({title,icon,stats} : CardStatsProps)  => {
   return (
-<Card className='p-6 bg-card '>
+<Card className='p-6 bg-card hover:outline-1 hover:cursor-pointer group relative overflow-hidden border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 '>
     <div className='flex items-center gap-4'>
-       <div className=' p-3 rounded-lg bg-primary/10'>
-             {icon && <span className="h-6 w-6">{icon}</span>}
+       <div className=' p-3 rounded-lg bg-primary/30 '>
+             {icon && <span className="h-6 w-6 text-primary">{icon}</span>}
        </div>
        <div>
         <p className='text-sm'>{title}</p>

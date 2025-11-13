@@ -20,6 +20,9 @@ const Profile = () => {
           titleButton="Deconexion"
           iconRight={<LogOut />}
          onClick={() => navigate("/")} 
+         secondaryButtonTitle="Export"
+         secondaryVariant="outline"
+       onSecondaryClick={() => console.log("Export")}
         />
        </div>
     
