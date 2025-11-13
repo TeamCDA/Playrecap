@@ -1,25 +1,32 @@
-
+import { Button } from "@/components/ui/button"
+import type { VariantProps } from "class-variance-authority"
+import { buttonVariants } from "@/components/ui/button"
+import type { ReactNode } from "react"
 
 interface ButtonProps {
-  title: string;
-  className?: string; 
-  onClick?: () => void;
+  title: string
+  subtitle?: string
+  titleButton?: string
+  className?: string
+  variant?: VariantProps<typeof buttonVariants>["variant"]
+  onClick?: () => void
+  iconLeft?: ReactNode
+  iconRight?: ReactNode
 }
 
-/*    <Button onClick={onClick}> 
-      {iconLeft && <span className="mr-2">{iconLeft}</span>}
-       {titleButton}  
-        {iconRight && <span className="mr-2">{iconRight}</span>}
-      </Button>*/
-const CustomButton = ({  title, className, onClick }: ButtonProps) => {
-  return (
+const CustomButton = ({
+  titleButton,
+  onClick,
+  iconLeft,
+  iconRight,
+  variant, }: ButtonProps) => {
 
-      <button className={`p-2 ${className ? className + ' ' : ''}dark:bg-slate-700 bg-slate-300 text-black dark:text-white`}
-      onClick={onClick}>
-        {title}
-      </button>
+      <Button onClick={onClick} className="font-semibold" variant={variant || "default"}>
+              {iconLeft && <span className="mr-2">{iconLeft}</span>}
+              {titleButton}
+              {iconRight && <span className="ml-2">{iconRight}</span>}
+            </Button>
 
-  );
 };
 
 export default CustomButton;
