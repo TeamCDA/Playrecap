@@ -4,9 +4,7 @@ import FiltersGames from "@/components/home/FiltersGames";
 import { GamesMockList } from "@/helpers/GamesMockList";
 import type Game from "@/models/Game";
 import { useState } from "react";
-import CardTestGame from "@/components/cards/CardTestGame";
 import EmptyGamesList from "@/components/home/EmptyGamesList";
-import DeleteUserDialog from "@/components/dialogs/DeleteUserDialog";
 
 const HomePage = () => {
   const list = GamesMockList;
@@ -42,8 +40,6 @@ const HomePage = () => {
         isEditMode={true}
       />
 
-      <DeleteUserDialog />
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {list.map((game) => (
           <CardGame
@@ -53,15 +49,7 @@ const HomePage = () => {
           />
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
-        {list.map((game) => (
-          <CardTestGame
-            key={game.id}
-            game={game}
-            onClick={() => handleGameClick(game)}
-          />
-        ))}
-      </div>
+
       <div className="flex justify-center mt-10">
         <AddGameDialog isEditMode={false} />
       </div>
