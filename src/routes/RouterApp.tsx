@@ -4,6 +4,7 @@ import HomePage from "../pages/HomePage";
 import Profile from "../pages/ProfilePage";
 import ForgotPassword from "../pages/ForgotPasswordPage";
 import LayoutWithNavbar from "@/components/layout/LayoutWithNavbar";
+import PrivateRoute from "./PrivateRoute";
 
 const RouterApp = () => {
   const location = useLocation();
@@ -12,13 +13,14 @@ const RouterApp = () => {
       {/* PUBLIC */}
       <Route path="/" element={<AuthPage />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
+      <Route path="/*" element={<p>404</p>} />
 
       {/* ROUTES WITH NAVBAR */}
-      <Route element={<LayoutWithNavbar /> }>
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/profile" element={<Profile />} />
-      </Route>
       {/* PRIVATE */}
+      <Route element={<LayoutWithNavbar /> }>
+        <Route path="/home" element={<PrivateRoute><HomePage /></PrivateRoute>} />
+        <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+      </Route>
       {/* TEST */}
     </Routes>
   );
