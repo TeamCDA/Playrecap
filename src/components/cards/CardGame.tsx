@@ -8,6 +8,7 @@ type GameProps = {
   onClick: () => void;
 };
 const CardGame = ({ game, onClick }: GameProps) => {
+  
   return (
     <Card
       onClick={onClick}
@@ -49,6 +50,7 @@ const CardGame = ({ game, onClick }: GameProps) => {
               <CheckCircleIcon className="w-4 h-4 text-muted-foreground" />
             </p>
           )}
+                        <p>{game.isFinish}</p>
           {game.note && (
             <p title={`${game.note && "note"}`}>
               <NotebookText
