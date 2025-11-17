@@ -1,9 +1,7 @@
 import AddGameDialog from "@/components/dialogs/AddGameDialog";
-import CardGame from "@/components/cards/CardGame";
 import FiltersGames from "@/components/home/FiltersGames";
 import type Game from "@/models/Game";
 import { useState } from "react";
-import EmptyGamesList from "@/components/home/EmptyGamesList";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +10,7 @@ import GamesGrid from "@/components/game/GamesGrid";
 
 const HomePage = () => {
   const { user, logout } = useAuth();
-  const { games, loading } = useGame();
+  const { games } = useGame();
   const navigate = useNavigate();
 
   //   const date = new Date();
@@ -48,7 +46,7 @@ const HomePage = () => {
       </div>
 
       <div className="mt-5">
-        <FiltersGames games={games ? games.length : 0} />
+        <FiltersGames games={games.length} />
       </div>
 
       <AddGameDialog
