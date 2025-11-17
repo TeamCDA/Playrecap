@@ -5,9 +5,14 @@ import { GamesMockList } from "@/helpers/GamesMockList";
 import type Game from "@/models/Game";
 import { useState } from "react";
 import EmptyGamesList from "@/components/home/EmptyGamesList";
+import { useAuth } from "@/contexts/AuthContext";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const { user, logout } = useAuth();
   const list = GamesMockList;
+  const navigate = useNavigate();
 
   //   const date = new Date();
   //   const year = date.getFullYear();
@@ -27,8 +32,18 @@ const HomePage = () => {
     setIsDialogOpen(false);
   };
 
+  const handleLogout = () => {
+    logout()
+    navigate("/")
+  }
+
   return (
     <div className="contenu">
+      <div className="flex justify-center items-center gap-4">
+        <p className="text-center my-5">USER : {user?.email}</p>
+        <Button variant={"destructive"} onClick={handleLogout}>Logout</Button>
+      </div>
+
       <div className="mt-5">
         <FiltersGames games={list.length} />
       </div>

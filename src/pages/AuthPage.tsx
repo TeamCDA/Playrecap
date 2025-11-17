@@ -16,10 +16,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { Eye, EyeOff } from "lucide-react"
 import { useNavigate } from "react-router-dom"
+import { useAuth } from "@/contexts/AuthContext"
 
 const AuthPage = () => {
   const [showPassword, setShowPassword] = useState(false)
     const navigate = useNavigate();
+    const { login, loading } = useAuth();
 
   const loginSchema = Yup.object({
     email: Yup.string().email("Email invalide").required("L'email est requis"),
@@ -34,12 +36,25 @@ const AuthPage = () => {
       .required("Confirmation requise"),
   })
 
+    const handleLogin = async (email: string, password: string) => {
+    // setError(null);
+    // setLoading(true);
+    const { error } = await login(email, password);
+    // if (error) setError(error);
+    if (error) console.log(error);
+    // if (error) setLoading(false);
+    else
+      setTimeout(() => {
+        window.location.href = "/home";
+      }, 1000);
+  };
+
 
   const loginFormik = useFormik({
     initialValues: { email: "", password: "" },
     validationSchema: loginSchema,
     onSubmit: (values) => {
-      console.log("Login:", values)
+      handleLogin(values.email, values.password);
     },
   })
 
